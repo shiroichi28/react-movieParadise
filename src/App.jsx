@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import MovieCard from "./movieCard";
 import SearchIcon from "./assets/search.svg";
 
-const API_URL = "http://www.omdbapi.com?apikey=75d6c475";
+const API_URL = "https://www.omdbapi.com?apikey=75d6c475";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -14,15 +14,8 @@ const App = () => {
   }, []);
 
   const searchMovies = async (title) => {
-    const requestOptions = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*", // Replace '*' with the actual domain if possible
-      },
-    };
-
-    const response = await fetch(`${API_URL}&s=${title}`, requestOptions);
+    
+    const response = await fetch(`${API_URL}&s=${title}`);
 
     const data = await response.json();
 
