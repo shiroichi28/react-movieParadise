@@ -1,7 +1,7 @@
 
 # Movie Paradise
 
-StopWatch is developed with Vite and React to list movies using OMDB API.I built this for an example of useState, UseEffect, API.
+Movie Paradise is developed with Vite and React to list movies using OMDB API.I built this for an example of useState, UseEffect, API.
 
 
 
